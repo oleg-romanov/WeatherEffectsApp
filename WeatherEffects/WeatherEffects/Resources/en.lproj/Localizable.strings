@@ -8,11 +8,13 @@
 
 // Weather events
 
-"clear" = "Clear";
+"sun" = "Sun";
 "rain" = "Rain";
+"heavyRain" = "Heavy Rain";
 "cloudy" = "Cloudy";
-"thunderStorm" = "Thunderstorm";
+"storm" = "Storm";
 "snow" = "Snow";
 "snowWithRain" = "Snow with Rain";
 "blizzard" = "Blizzard";
 "fog" = "Fog";
+"windy" = "Windy";

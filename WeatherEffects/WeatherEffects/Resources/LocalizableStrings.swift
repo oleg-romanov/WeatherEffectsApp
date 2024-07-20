@@ -8,12 +8,14 @@
 import Foundation
 
 struct LocalizableStrings {
-    static let clear = NSLocalizedString("clear", comment: "")
+    static let sun = NSLocalizedString("sun", comment: "")
     static let rain = NSLocalizedString("rain", comment: "")
+    static let heavyRain = NSLocalizedString("heavyRain", comment: "")
     static let cloudy = NSLocalizedString("cloudy", comment: "")
-    static let thunderStorm = NSLocalizedString("thunderStorm", comment: "")
+    static let storm = NSLocalizedString("storm", comment: "")
     static let snow = NSLocalizedString("snow", comment: "")
     static let snowWithRain = NSLocalizedString("snowWithRain", comment: "")
     static let blizzard = NSLocalizedString("blizzard", comment: "")
     static let fog = NSLocalizedString("fog", comment: "")
+    static let windy = NSLocalizedString("windy", comment: "")
 }

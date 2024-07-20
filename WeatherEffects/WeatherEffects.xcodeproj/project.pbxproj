@@ -14,6 +14,10 @@
 		EAD8FCC22C4B9B1700D997A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCC12C4B9B1700D997A2 /* Base */; };
 		EAD8FCD12C4BA22700D997A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCCF2C4BA22700D997A2 /* Localizable.strings */; };
 		EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */; };
+		EAD8FCD82C4BE0A100D997A2 /* WeatherEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD72C4BE0A100D997A2 /* WeatherEffects.swift */; };
+		EAD8FCDA2C4C059600D997A2 /* WeatherEffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD92C4C059600D997A2 /* WeatherEffectCell.swift */; };
+		EAD8FCDF2C4C160800D997A2 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCDE2C4C160800D997A2 /* UIFont+Extensions.swift */; };
+		EAD8FCE12C4C1C0700D997A2 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCE02C4C1C0700D997A2 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		EAD8FCD22C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EAD8FCD32C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		EAD8FCD72C4BE0A100D997A2 /* WeatherEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEffects.swift; sourceTree = "<group>"; };
+		EAD8FCD92C4C059600D997A2 /* WeatherEffectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEffectCell.swift; sourceTree = "<group>"; };
+		EAD8FCDE2C4C160800D997A2 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		EAD8FCE02C4C1C0700D997A2 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 				EAD8FCC92C4B9F3400D997A2 /* MainFiles */,
 				EAD8FCCB2C4B9FBB00D997A2 /* Modules */,
 				EAD8FCCA2C4B9F7700D997A2 /* Resources */,
+				EAD8FCDB2C4C14FD00D997A2 /* Extensions */,
 			);
 			path = WeatherEffects;
 			sourceTree = "<group>";
@@ -84,6 +93,7 @@
 				EAD8FCBE2C4B9B1700D997A2 /* Assets.xcassets */,
 				EAD8FCCF2C4BA22700D997A2 /* Localizable.strings */,
 				EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */,
+				EAD8FCE02C4C1C0700D997A2 /* ColorConstants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -91,9 +101,27 @@
 		EAD8FCCB2C4B9FBB00D997A2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EAD8FCB92C4B9B1000D997A2 /* WeatherEffectsController.swift */,
+				EAD8FCD62C4BE08C00D997A2 /* WeatherEffects */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		EAD8FCD62C4BE08C00D997A2 /* WeatherEffects */ = {
+			isa = PBXGroup;
+			children = (
+				EAD8FCB92C4B9B1000D997A2 /* WeatherEffectsController.swift */,
+				EAD8FCD72C4BE0A100D997A2 /* WeatherEffects.swift */,
+				EAD8FCD92C4C059600D997A2 /* WeatherEffectCell.swift */,
+			);
+			path = WeatherEffects;
+			sourceTree = "<group>";
+		};
+		EAD8FCDB2C4C14FD00D997A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAD8FCDE2C4C160800D997A2 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +198,12 @@
 			files = (
 				EAD8FCBA2C4B9B1000D997A2 /* WeatherEffectsController.swift in Sources */,
 				EAD8FCB62C4B9B1000D997A2 /* AppDelegate.swift in Sources */,
+				EAD8FCDF2C4C160800D997A2 /* UIFont+Extensions.swift in Sources */,
+				EAD8FCE12C4C1C0700D997A2 /* ColorConstants.swift in Sources */,
 				EAD8FCB82C4B9B1000D997A2 /* SceneDelegate.swift in Sources */,
+				EAD8FCD82C4BE0A100D997A2 /* WeatherEffects.swift in Sources */,
 				EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */,
+				EAD8FCDA2C4C059600D997A2 /* WeatherEffectCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
