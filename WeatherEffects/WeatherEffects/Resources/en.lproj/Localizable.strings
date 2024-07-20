@@ -5,3 +5,14 @@
   Created by Олег Романов on 20.07.2024.
   
 */
+
+// Weather events
+
+"clear" = "Clear";
+"rain" = "Rain";
+"cloudy" = "Cloudy";
+"thunderStorm" = "Thunderstorm";
+"snow" = "Snow";
+"snowWithRain" = "Snow with Rain";
+"blizzard" = "Blizzard";
+"fog" = "Fog";

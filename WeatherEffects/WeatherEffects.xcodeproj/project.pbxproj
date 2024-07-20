@@ -13,6 +13,7 @@
 		EAD8FCBF2C4B9B1700D997A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCBE2C4B9B1700D997A2 /* Assets.xcassets */; };
 		EAD8FCC22C4B9B1700D997A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCC12C4B9B1700D997A2 /* Base */; };
 		EAD8FCD12C4BA22700D997A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCCF2C4BA22700D997A2 /* Localizable.strings */; };
+		EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EAD8FCD02C4BA22700D997A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAD8FCD22C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EAD8FCD32C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				EAD8FCBE2C4B9B1700D997A2 /* Assets.xcassets */,
 				EAD8FCCF2C4BA22700D997A2 /* Localizable.strings */,
+				EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				EAD8FCBA2C4B9B1000D997A2 /* WeatherEffectsController.swift in Sources */,
 				EAD8FCB62C4B9B1000D997A2 /* AppDelegate.swift in Sources */,
 				EAD8FCB82C4B9B1000D997A2 /* SceneDelegate.swift in Sources */,
+				EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
