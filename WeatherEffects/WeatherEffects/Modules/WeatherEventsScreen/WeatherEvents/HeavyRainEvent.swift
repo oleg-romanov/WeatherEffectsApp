@@ -9,7 +9,7 @@ import UIKit
 
 final class HeavyRainEvent: WeatherEventItem {
     
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer {
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer? {
         let emitterLayer = CAEmitterLayer()
         
         emitterLayer.emitterShape = .line
@@ -19,7 +19,7 @@ final class HeavyRainEvent: WeatherEventItem {
         return emitterLayer
     }
     
-    func configureEmitterCells() -> [CAEmitterCell] {
+    func configureEmitterCells() -> [CAEmitterCell]? {
         let heavyRainCell = CAEmitterCell()
         
         heavyRainCell.contents = CGImage.drawRainDrop()
@@ -40,5 +40,9 @@ final class HeavyRainEvent: WeatherEventItem {
     
     func fetchEventIcon() -> UIImage {
         return UIImage(systemName: WeatherEvents.heavyRain.iconSystemName) ?? UIImage()
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
     }
 }

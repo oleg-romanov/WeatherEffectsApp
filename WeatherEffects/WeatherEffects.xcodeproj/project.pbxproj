@@ -19,6 +19,7 @@
 		EA5F95A52C4EC4BE0070B641 /* BlizzardEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95A42C4EC4BE0070B641 /* BlizzardEvent.swift */; };
 		EA5F95A72C4EC5810070B641 /* FogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95A62C4EC5810070B641 /* FogEvent.swift */; };
 		EA5F95A92C4EC61F0070B641 /* WindyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95A82C4EC61F0070B641 /* WindyEvent.swift */; };
+		EA5F95AB2C4ED9530070B641 /* ClearEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95AA2C4ED9530070B641 /* ClearEvent.swift */; };
 		EAD8FCB62C4B9B1000D997A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCB52C4B9B1000D997A2 /* AppDelegate.swift */; };
 		EAD8FCB82C4B9B1000D997A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCB72C4B9B1000D997A2 /* SceneDelegate.swift */; };
 		EAD8FCBA2C4B9B1000D997A2 /* WeatherEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCB92C4B9B1000D997A2 /* WeatherEventsController.swift */; };
@@ -45,6 +46,7 @@
 		EA5F95A42C4EC4BE0070B641 /* BlizzardEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlizzardEvent.swift; sourceTree = "<group>"; };
 		EA5F95A62C4EC5810070B641 /* FogEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogEvent.swift; sourceTree = "<group>"; };
 		EA5F95A82C4EC61F0070B641 /* WindyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyEvent.swift; sourceTree = "<group>"; };
+		EA5F95AA2C4ED9530070B641 /* ClearEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearEvent.swift; sourceTree = "<group>"; };
 		EAD8FCB22C4B9B1000D997A2 /* WeatherEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD8FCB52C4B9B1000D997A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD8FCB72C4B9B1000D997A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		EA5F95972C4EA0D40070B641 /* WeatherEvents */ = {
 			isa = PBXGroup;
 			children = (
+				EA5F95AA2C4ED9530070B641 /* ClearEvent.swift */,
 				EA5F95982C4EA0E70070B641 /* RainEvent.swift */,
 				EA5F959A2C4EAA980070B641 /* HeavyRainEvent.swift */,
 				EA5F959C2C4EBFFF0070B641 /* CloudyEvent.swift */,
@@ -258,6 +261,7 @@
 				EA5F95A72C4EC5810070B641 /* FogEvent.swift in Sources */,
 				EA5F95962C4E94C60070B641 /* WeatherEffectLayer.swift in Sources */,
 				EA5F959B2C4EAA980070B641 /* HeavyRainEvent.swift in Sources */,
+				EA5F95AB2C4ED9530070B641 /* ClearEvent.swift in Sources */,
 				EA5F95922C4D41070070B641 /* CGImage+Extensions.swift in Sources */,
 				EA5F95942C4E911B0070B641 /* WeatherEffectConfigurable.swift in Sources */,
 			);

@@ -9,7 +9,7 @@ import UIKit
 
 final class FogEvent: WeatherEventItem {
     
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer {
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer? {
         let emitterLayer = CAEmitterLayer()
         
         emitterLayer.emitterShape = .rectangle
@@ -19,7 +19,7 @@ final class FogEvent: WeatherEventItem {
         return emitterLayer
     }
     
-    func configureEmitterCells() -> [CAEmitterCell] {
+    func configureEmitterCells() -> [CAEmitterCell]? {
         let fogCell = CAEmitterCell()
         
         let cgImg = CGImage.blurCGImage((UIImage(named: "fog")?.cgImage)!, radius: 50)
@@ -41,5 +41,9 @@ final class FogEvent: WeatherEventItem {
     
     func fetchEventIcon() -> UIImage {
         return UIImage(systemName: WeatherEvents.fog.iconSystemName) ?? UIImage()
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
     }
 }

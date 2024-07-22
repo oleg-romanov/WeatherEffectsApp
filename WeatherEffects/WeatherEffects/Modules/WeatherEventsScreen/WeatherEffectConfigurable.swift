@@ -10,19 +10,27 @@ import UIKit
 typealias WeatherEventItem = WeatherEffectConfigurable & WeatherEventConfigurable
 
 protocol WeatherEffectConfigurable {
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer
-    func configureEmitterCells() -> [CAEmitterCell]
     
-    var additionalSublayers: [CALayer]? { get }
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer?
+    func configureEmitterCells() -> [CAEmitterCell]?
+    
+    func configureAdditionalSublayers(on bounds: CGRect) -> [CALayer]?
+    func configureBackgroundColor() -> CGColor?
 }
 
 extension WeatherEffectConfigurable {
-    var additionalSublayers: [CALayer]? {
+    
+    func configureAdditionalSublayers(on bounds: CGRect) -> [CALayer]? {
         return nil
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor.white.cgColor
     }
 }
 
 protocol WeatherEventConfigurable {
+    
     func fetchEventName() -> String
     func fetchEventIcon() -> UIImage
 }

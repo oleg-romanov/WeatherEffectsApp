@@ -9,36 +9,23 @@ import UIKit
 
 final class WeatherEffectLayer: CALayer {
     
-    // MARK: Initializers
-    
-    override init() {
-        super.init()
-        setupStyle()
-    }
-    
-    override init(layer: Any) {
-        super.init(layer: layer)
-        setupStyle()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     // MARK: Setup
     
-    private func setupStyle() {
-        backgroundColor = UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
+    func setupStyle(with color: CGColor? = nil) {
+        backgroundColor = color
     }
     
     // MARK: Instance Properties
     
     private var contentSublayer: CALayer?
-    private var additionalSublayers: [CALayer]?
     
     // MARK: Instance Methods
     
     func configure(with effect: WeatherEffectConfigurable) {
+        if let backgroundColor = effect.configureBackgroundColor() {
+            setupStyle(with: backgroundColor)
+        }
+        
         if let oldContentSublayer = contentSublayer {
             let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
             fadeOutAnimation.fromValue = 1.0
@@ -59,14 +46,15 @@ final class WeatherEffectLayer: CALayer {
         addSublayer(newContentSublayer)
         contentSublayer = newContentSublayer
         
-        if let additionalSublayers = effect.additionalSublayers {
+        if let additionalSublayers = effect.configureAdditionalSublayers(on: bounds) {
             additionalSublayers.forEach {
                 newContentSublayer.addSublayer($0)
             }
         }
         
-        let newEmitterLayer = effect.configureEmitterLayer(with: contentSublayer!.bounds)
-        newEmitterLayer.emitterCells = effect.configureEmitterCells()
-        newContentSublayer.addSublayer(newEmitterLayer)
+        if let newEmitterLayer = effect.configureEmitterLayer(with: bounds) {
+            newEmitterLayer.emitterCells = effect.configureEmitterCells()
+            newContentSublayer.addSublayer(newEmitterLayer)
+        }
     }
 }

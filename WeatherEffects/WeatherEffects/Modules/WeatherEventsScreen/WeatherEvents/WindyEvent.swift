@@ -9,7 +9,7 @@ import UIKit
 
 final class WindyEvent: WeatherEventItem {
     
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer {
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer? {
         let emitterLayer = CAEmitterLayer()
         
         emitterLayer.emitterShape = .rectangle
@@ -19,7 +19,7 @@ final class WindyEvent: WeatherEventItem {
         return emitterLayer
     }
     
-    func configureEmitterCells() -> [CAEmitterCell] {
+    func configureEmitterCells() -> [CAEmitterCell]? {
         let windyPointsCell = CAEmitterCell()
         let windyLinesCell = CAEmitterCell()
  
@@ -52,5 +52,9 @@ final class WindyEvent: WeatherEventItem {
     
     func fetchEventIcon() -> UIImage {
         return UIImage(systemName: WeatherEvents.windy.iconSystemName) ?? UIImage()
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
     }
 }

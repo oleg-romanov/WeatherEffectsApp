@@ -9,7 +9,7 @@ import UIKit
 
 final class BlizzardEvent: WeatherEventItem {
     
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer {
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer? {
         let emitterLayer = CAEmitterLayer()
         
         emitterLayer.emitterShape = .rectangle
@@ -19,7 +19,7 @@ final class BlizzardEvent: WeatherEventItem {
         return emitterLayer
     }
     
-    func configureEmitterCells() -> [CAEmitterCell] {
+    func configureEmitterCells() -> [CAEmitterCell]? {
         let snowCell = CAEmitterCell()
         
         snowCell.contents = UIImage(named: "snowflake")?.cgImage
@@ -41,5 +41,9 @@ final class BlizzardEvent: WeatherEventItem {
     
     func fetchEventIcon() -> UIImage {
         return UIImage(systemName: WeatherEvents.blizzard.iconSystemName) ?? UIImage()
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
     }
 }

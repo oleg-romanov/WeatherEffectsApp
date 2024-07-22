@@ -70,7 +70,7 @@ final class WeatherEventCell: UICollectionViewCell {
     // MARK: Setup
     
     private func setupStyle() {
-        backgroundColor = UIColor(named: ColorNameConstants.lightBlueColor)
+        backgroundColor = UIColor(named: ColorNameConstants.cellColor)
         layer.cornerRadius = 24
     }
     

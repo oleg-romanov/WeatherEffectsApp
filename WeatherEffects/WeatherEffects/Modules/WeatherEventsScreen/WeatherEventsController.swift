@@ -78,6 +78,7 @@ class WeatherEventsController: UIViewController {
     }
     
     private func setupWeatherEvents() {
+        let clearEvent = ClearEvent()
         let rainEvent = RainEvent()
         let heavyRainEvent = HeavyRainEvent()
         let cloudyEvent = CloudyEvent()
@@ -88,6 +89,7 @@ class WeatherEventsController: UIViewController {
         let fogEvent = FogEvent()
         let windyEvent = WindyEvent()
         
+        weatherEvents.append(clearEvent)
         weatherEvents.append(rainEvent)
         weatherEvents.append(heavyRainEvent)
         weatherEvents.append(cloudyEvent)

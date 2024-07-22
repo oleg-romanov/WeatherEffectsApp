@@ -8,7 +8,7 @@
 import UIKit
 
 final class RainEvent: WeatherEventItem {
-    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer {
+    func configureEmitterLayer(with bounds: CGRect) -> CAEmitterLayer? {
         let emitterLayer = CAEmitterLayer()
         emitterLayer.emitterShape = .line
         emitterLayer.emitterPosition = CGPoint(x: bounds.midX, y: 0)
@@ -17,7 +17,7 @@ final class RainEvent: WeatherEventItem {
         return emitterLayer
     }
     
-    func configureEmitterCells() -> [CAEmitterCell] {
+    func configureEmitterCells() -> [CAEmitterCell]? {
         let rainCell = CAEmitterCell()
         rainCell.contents = CGImage.drawRainDrop()
         rainCell.birthRate = 35
@@ -37,5 +37,9 @@ final class RainEvent: WeatherEventItem {
     
     func fetchEventIcon() -> UIImage {
         return UIImage(systemName: WeatherEvents.rain.iconSystemName) ?? UIImage()
+    }
+    
+    func configureBackgroundColor() -> CGColor? {
+        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
     }
 }
