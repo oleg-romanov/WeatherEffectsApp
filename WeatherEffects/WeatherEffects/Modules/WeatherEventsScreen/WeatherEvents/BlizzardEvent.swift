@@ -44,6 +44,6 @@ final class BlizzardEvent: WeatherEventItem {
     }
     
     func configureBackgroundColor() -> CGColor? {
-        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
+        return UIColor(named: ColorNameConstants.deepBlueColor)?.cgColor
     }
 }

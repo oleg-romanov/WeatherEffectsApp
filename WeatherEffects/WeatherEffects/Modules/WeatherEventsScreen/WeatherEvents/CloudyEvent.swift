@@ -23,7 +23,7 @@ final class CloudyEvent: WeatherEventItem {
         let cloudy1Cell = CAEmitterCell()
         let cloudy2Cell = CAEmitterCell()
 
-        cloudy1Cell.contents = UIImage(named: "cloud")?.cgImage
+        cloudy1Cell.contents = UIImage(named: "cloud1")?.cgImage
         cloudy1Cell.birthRate = 0.3
         cloudy1Cell.lifetime = 200.0
         cloudy1Cell.velocity = 10

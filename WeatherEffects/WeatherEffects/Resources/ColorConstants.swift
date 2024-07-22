@@ -12,4 +12,5 @@ struct ColorNameConstants {
     static let cellColor = "CellColor"
     static let steelBlueColor = "SteelBlueColor"
     static let lightBlueColor = "LightBlueColor"
+    static let deepBlueColor = "DeepBlueColor"
 }

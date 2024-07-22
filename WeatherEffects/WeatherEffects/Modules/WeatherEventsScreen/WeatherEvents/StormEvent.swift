@@ -23,8 +23,8 @@ final class StormEvent: WeatherEventItem {
         let stormRainCell = CAEmitterCell()
         
         stormRainCell.contents = CGImage.drawRainDrop()
-        stormRainCell.birthRate = 35
-        stormRainCell.velocity = 500
+        stormRainCell.birthRate = 55
+        stormRainCell.velocity = 550
         stormRainCell.lifetime =  Float(UIScreen.main.bounds.height / stormRainCell.velocity)
         stormRainCell.velocityRange = 150
         stormRainCell.emissionLongitude = .pi
@@ -43,6 +43,39 @@ final class StormEvent: WeatherEventItem {
     }
     
     func configureBackgroundColor() -> CGColor? {
-        return UIColor(named: ColorNameConstants.steelBlueColor)?.cgColor
+        return UIColor(named: ColorNameConstants.deepBlueColor)?.cgColor
+    }
+    
+    func configureAdditionalSublayers(on bounds: CGRect) -> [CALayer]? {
+        let thunderLayer = CALayer()
+        
+        if let thunderImage = UIImage(named: "thunder")?.cgImage {
+            thunderLayer.contents = thunderImage
+            thunderLayer.contentsScale = 0.5
+            thunderLayer.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+            thunderLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+            thunderLayer.opacity = 1
+        }
+        
+        let flashAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        flashAnimation.values = [0, 1, 0, 1, 0]
+        flashAnimation.keyTimes = [0, 0.1, 0.2, 0.3, 0.4]
+        flashAnimation.duration = 0.5
+        
+        let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
+        fadeOutAnimation.fromValue = 0
+        fadeOutAnimation.toValue = 0
+        fadeOutAnimation.beginTime = 1.0
+        fadeOutAnimation.duration = 3.0
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.animations = [flashAnimation, fadeOutAnimation]
+        animationGroup.duration = 4
+        animationGroup.repeatCount = .infinity
+        animationGroup.timeOffset = 15.0
+        
+        thunderLayer.add(animationGroup, forKey: "lightningAnimation")
+        
+        return [thunderLayer]
     }
 }
