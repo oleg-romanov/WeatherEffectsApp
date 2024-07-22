@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA5F95922C4D41070070B641 /* CGImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95912C4D41070070B641 /* CGImage+Extensions.swift */; };
-		EA5F95942C4E911B0070B641 /* WeatherEffectConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95932C4E911B0070B641 /* WeatherEffectConfigurable.swift */; };
+		EA5F95942C4E911B0070B641 /* WeatherEffectProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95932C4E911B0070B641 /* WeatherEffectProtocols.swift */; };
 		EA5F95962C4E94C60070B641 /* WeatherEffectLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95952C4E94C60070B641 /* WeatherEffectLayer.swift */; };
 		EA5F95992C4EA0E70070B641 /* RainEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95982C4EA0E70070B641 /* RainEvent.swift */; };
 		EA5F959B2C4EAA980070B641 /* HeavyRainEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F959A2C4EAA980070B641 /* HeavyRainEvent.swift */; };
@@ -27,7 +27,7 @@
 		EAD8FCC22C4B9B1700D997A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCC12C4B9B1700D997A2 /* Base */; };
 		EAD8FCD12C4BA22700D997A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAD8FCCF2C4BA22700D997A2 /* Localizable.strings */; };
 		EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */; };
-		EAD8FCD82C4BE0A100D997A2 /* WeatherEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD72C4BE0A100D997A2 /* WeatherEvents.swift */; };
+		EAD8FCD82C4BE0A100D997A2 /* WeatherEventsCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD72C4BE0A100D997A2 /* WeatherEventsCases.swift */; };
 		EAD8FCDA2C4C059600D997A2 /* WeatherEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCD92C4C059600D997A2 /* WeatherEventCell.swift */; };
 		EAD8FCDF2C4C160800D997A2 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCDE2C4C160800D997A2 /* UIFont+Extensions.swift */; };
 		EAD8FCE12C4C1C0700D997A2 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8FCE02C4C1C0700D997A2 /* ColorConstants.swift */; };
@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		EA5F95912C4D41070070B641 /* CGImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Extensions.swift"; sourceTree = "<group>"; };
-		EA5F95932C4E911B0070B641 /* WeatherEffectConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEffectConfigurable.swift; sourceTree = "<group>"; };
+		EA5F95932C4E911B0070B641 /* WeatherEffectProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEffectProtocols.swift; sourceTree = "<group>"; };
 		EA5F95952C4E94C60070B641 /* WeatherEffectLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEffectLayer.swift; sourceTree = "<group>"; };
 		EA5F95982C4EA0E70070B641 /* RainEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainEvent.swift; sourceTree = "<group>"; };
 		EA5F959A2C4EAA980070B641 /* HeavyRainEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeavyRainEvent.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		EAD8FCD22C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EAD8FCD32C4BA35B00D997A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAD8FCD42C4BC2B000D997A2 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
-		EAD8FCD72C4BE0A100D997A2 /* WeatherEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEvents.swift; sourceTree = "<group>"; };
+		EAD8FCD72C4BE0A100D997A2 /* WeatherEventsCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEventsCases.swift; sourceTree = "<group>"; };
 		EAD8FCD92C4C059600D997A2 /* WeatherEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEventCell.swift; sourceTree = "<group>"; };
 		EAD8FCDE2C4C160800D997A2 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EAD8FCE02C4C1C0700D997A2 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
@@ -154,9 +154,9 @@
 			children = (
 				EA5F95972C4EA0D40070B641 /* WeatherEvents */,
 				EAD8FCB92C4B9B1000D997A2 /* WeatherEventsController.swift */,
-				EAD8FCD72C4BE0A100D997A2 /* WeatherEvents.swift */,
+				EAD8FCD72C4BE0A100D997A2 /* WeatherEventsCases.swift */,
 				EAD8FCD92C4C059600D997A2 /* WeatherEventCell.swift */,
-				EA5F95932C4E911B0070B641 /* WeatherEffectConfigurable.swift */,
+				EA5F95932C4E911B0070B641 /* WeatherEffectProtocols.swift */,
 				EA5F95952C4E94C60070B641 /* WeatherEffectLayer.swift */,
 			);
 			path = WeatherEventsScreen;
@@ -255,7 +255,7 @@
 				EAD8FCB82C4B9B1000D997A2 /* SceneDelegate.swift in Sources */,
 				EA5F95A12C4EC3580070B641 /* SnowEvent.swift in Sources */,
 				EA5F95A52C4EC4BE0070B641 /* BlizzardEvent.swift in Sources */,
-				EAD8FCD82C4BE0A100D997A2 /* WeatherEvents.swift in Sources */,
+				EAD8FCD82C4BE0A100D997A2 /* WeatherEventsCases.swift in Sources */,
 				EAD8FCD52C4BC2B000D997A2 /* LocalizableStrings.swift in Sources */,
 				EAD8FCDA2C4C059600D997A2 /* WeatherEventCell.swift in Sources */,
 				EA5F95A72C4EC5810070B641 /* FogEvent.swift in Sources */,
@@ -263,7 +263,7 @@
 				EA5F959B2C4EAA980070B641 /* HeavyRainEvent.swift in Sources */,
 				EA5F95AB2C4ED9530070B641 /* ClearEvent.swift in Sources */,
 				EA5F95922C4D41070070B641 /* CGImage+Extensions.swift in Sources */,
-				EA5F95942C4E911B0070B641 /* WeatherEffectConfigurable.swift in Sources */,
+				EA5F95942C4E911B0070B641 /* WeatherEffectProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

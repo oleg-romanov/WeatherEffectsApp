@@ -18,6 +18,10 @@ class WeatherEventsController: UIViewController {
         static let collectionViewItemWidth: CGFloat = UIScreen.main.bounds.width / 3
         static let collectionViewItemHeight: CGFloat = collectionViewItemWidth
         static let collectionViewHeight: CGFloat = collectionViewItemHeight
+        
+        static let collectionViewTopInset: CGFloat = 32
+        static let collectionViewleadingInset: CGFloat = 24
+        static let collectionViewTrailingInset: CGFloat = 24
     }
     
     // MARK: Instance Properties
@@ -107,15 +111,15 @@ class WeatherEventsController: UIViewController {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor,
-                constant: 32
+                constant: Constants.collectionViewTopInset
             ),
             collectionView.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor,
-                constant: 24
+                constant: Constants.collectionViewleadingInset
             ),
             collectionView.trailingAnchor.constraint(
                 equalTo: view.trailingAnchor,
-                constant: -24
+                constant: -Constants.collectionViewTrailingInset
             ),
             collectionView.heightAnchor.constraint(
                 equalToConstant: Constants.collectionViewHeight

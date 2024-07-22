@@ -1,5 +1,5 @@
 //
-//  WeatherEvents.swift
+//  WeatherEventsCases.swift
 //  WeatherEffects
 //
 //  Created by Олег Романов on 20.07.2024.

@@ -13,6 +13,13 @@ final class WeatherEventCell: UICollectionViewCell {
     
     private struct Constants {
         static let eventNameLabelNumberOfLines: Int = 2
+        static let cellCornerRadius: CGFloat = 24
+        
+        static let eventImageViewTopInset: CGFloat = 8
+        static let eventNameLabelTopInset: CGFloat = 4
+        static let eventNameLabelLeadingInset: CGFloat = 8
+        static let eventNameLabelTrailingInset: CGFloat = 8
+        static let eventNameLabelBottomInset: CGFloat = 8
     }
     
     // MARK: Instance Properties
@@ -71,7 +78,7 @@ final class WeatherEventCell: UICollectionViewCell {
     
     private func setupStyle() {
         backgroundColor = UIColor(named: ColorNameConstants.cellColor)
-        layer.cornerRadius = 24
+        layer.cornerRadius = Constants.cellCornerRadius
     }
     
     private func addSubviews() {
@@ -91,7 +98,7 @@ final class WeatherEventCell: UICollectionViewCell {
             ),
             eventImageView.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: 8
+                constant: Constants.eventImageViewTopInset
             ),
             eventImageView.centerXAnchor.constraint(
                 equalTo: contentView.centerXAnchor
@@ -99,19 +106,19 @@ final class WeatherEventCell: UICollectionViewCell {
             
             eventNameLabel.topAnchor.constraint(
                 equalTo: eventImageView.bottomAnchor,
-                constant: 4
+                constant: Constants.eventNameLabelTopInset
             ),
             eventNameLabel.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: 8
+                constant: Constants.eventNameLabelLeadingInset
             ),
             eventNameLabel.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: -8
+                constant: -Constants.eventNameLabelTrailingInset
             ),
             eventNameLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -8
+                constant: -Constants.eventNameLabelBottomInset
             )
         ])
     }
