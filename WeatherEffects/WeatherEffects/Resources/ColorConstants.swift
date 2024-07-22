@@ -9,5 +9,6 @@ import Foundation
 
 struct ColorNameConstants {
     static let mainTextColor = "MainTextColor"
-    static let backgroundColor = "BackgroundColor"
+    static let lightBlueColor = "LightBlueColor"
+    static let steelBlueColor = "SteelBlueColor"
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WeatherEffectCell: UICollectionViewCell {
+final class WeatherEventCell: UICollectionViewCell {
     
     // MARK: Constants
     
@@ -16,6 +16,12 @@ final class WeatherEffectCell: UICollectionViewCell {
     }
     
     // MARK: Instance Properties
+    
+    var isActive: Bool = false {
+        didSet {
+            updateBorder()
+        }
+    }
     
     private lazy var eventImageView: UIImageView = {
         let imageView = UIImageView()
@@ -53,10 +59,18 @@ final class WeatherEffectCell: UICollectionViewCell {
         makeConstraints()
     }
     
+    // MARK: Lifecycle
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 0.0
+    }
+    
     // MARK: Setup
     
     private func setupStyle() {
-        backgroundColor = UIColor(named: ColorNameConstants.backgroundColor)
+        backgroundColor = UIColor(named: ColorNameConstants.lightBlueColor)
         layer.cornerRadius = 24
     }
     
@@ -102,10 +116,22 @@ final class WeatherEffectCell: UICollectionViewCell {
         ])
     }
     
-    // MARK: Instance Methods
+    // MARK: Private Methods
     
-    func configure(with iconName: String, and eventName: String) {
-        eventImageView.image = UIImage(systemName: iconName)
+    private func updateBorder() {
+        if isActive {
+            layer.borderColor = UIColor.white.cgColor
+            layer.borderWidth = 2.0
+        } else {
+            layer.borderColor = UIColor.clear.cgColor
+            layer.borderWidth = 0.0
+        }
+    }
+    
+    // MARK: Internal Methods
+    
+    func configure(with icon: UIImage, and eventName: String) {
+        eventImageView.image = icon
         eventNameLabel.text = eventName
     }
 }

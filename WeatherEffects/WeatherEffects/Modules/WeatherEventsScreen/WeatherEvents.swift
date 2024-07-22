@@ -1,5 +1,5 @@
 //
-//  WeatherEffects.swift
+//  WeatherEvents.swift
 //  WeatherEffects
 //
 //  Created by Олег Романов on 20.07.2024.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum WeatherEffects: String, CaseIterable {
-    case sun
+enum WeatherEvents: String, CaseIterable {
+    case clear
     case rain
     case heavyRain
     case cloudy
@@ -22,8 +22,8 @@ enum WeatherEffects: String, CaseIterable {
     var localized: String {
         get {
             switch self {
-                case .sun:
-                    return LocalizableStrings.sun
+                case .clear:
+                    return LocalizableStrings.clear
                 case .rain:
                     return LocalizableStrings.rain
                 case .heavyRain:
@@ -49,14 +49,14 @@ enum WeatherEffects: String, CaseIterable {
     var iconSystemName: String {
         get {
             switch self {
-                case .sun:
+                case .clear:
                     return "sun.max.fill"
                 case .rain:
                     return "cloud.rain.fill"
                 case .heavyRain:
                     return "cloud.heavyrain.fill"
                 case .cloudy:
-                    return "cloud.fill"
+                    return "smoke.fill"
                 case .storm:
                     return "cloud.bolt.rain.fill"
                 case .snow:

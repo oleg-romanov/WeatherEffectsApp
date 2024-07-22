@@ -8,7 +8,7 @@
 
 // Weather events
 
-"sun" = "Sun";
+"clear" = "Clear";
 "rain" = "Rain";
 "heavyRain" = "Heavy Rain";
 "cloudy" = "Cloudy";
